@@ -11,16 +11,67 @@
     <link rel="stylesheet" href="./Assets/css/style.css">    
 
 </head>
+<!-- jumbotron intro -->
+<body class="body">
+    <section class="start-container" id="">
+        <div class="jumbotron my-5 ">
+            <h1 class="display-4" id="jumbo-header">Quiz Time!</h1>
+            <p class="lead">Its time to take a quick refresher on javaScript, answer the questions to save your score and log your highscore. 
+                <br>The remainder of time will ultimately be your score, points will be lost for incorrect answers.
+            <br>Goodluck!</p>
 
-<body>
-    <div class="jumbotron my-5 ">
-        <h1 class="display-4">Quiz Time!</h1>
-        <p class="lead">Its time to take a quick refresher on javaScript, answer the questions to save your score and log your highscore.</p>
-        <hr class="my-4">
-        <p>Click start to begin.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Start</a>
-    </div>
+            <hr class="my-4">
+            <p id="jumbo-p">Click start to begin.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button" id="jumbo-btn">Start</a>
+        </div>
+    </section>
 
+
+<!-- quiz questions -->
+    <section class="quiz-container">
+        <h2 class="question-number"></h2>
+        <div class="question"></div>
+        <div class="answers">
+            <div class="answer-choices">
+                <button class="btn" id="btn-1" value="a"></button>
+            </div>
+            <div class="answer-choices">
+                <button class="btn" id="btn-2" value="b"></button>
+            </div>
+            <div class="answer-choices">
+                <button class="btn" id="btn-3" value="c"></button>
+            </div>
+            <div class="answer-choices">
+                <button class="btn" id="btn-4" value="d"></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="score-container">
+        <div class="score"></div>
+    </section>
+
+<!-- hidden "end of quiz" section revealed after quiz -->
+    <section class="quiz-end">
+        <h2>End of Quiz!</h2>
+        <p> <span class="quiz-score"></span> was your score! Please enter your name to save onto highscore list</p>
+        <div class="form-group">
+            <textarea class="form-control w-25" id="player-name" rows="1" placeholder="Name"></textarea>
+            <a class="btn btn-primary btn-lg" href="#" role="button" id="submit-btn">Submit</a>
+        </div>
+    </section>
+
+
+<!-- hidden "highscore" section revealed after quiz -->
+    <section class="highscore-container">
+        <div class="card" id="highscore" style="width: 40rem;">
+            <div class="card-body">
+            <h5 class="card-title">Highscores!</h5>
+            <p class="card-text">Scores can be updated each time progress is made.</p>
+            <a href="./scores.html" class="card-link">Highscore link</a>
+            </div>
+        </div>
+    </section>  
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
